@@ -1,5 +1,3 @@
-
-
 import java.util.Scanner;
 
 class Node
@@ -25,10 +23,10 @@ class LinkedList{
 		head=null;
 		count=0;
 	}
-
+    Scanner sc=new Scanner(System.in);
 	void create(int n)
 	{
-		Scanner sc=new Scanner(System.in);
+		
 		int value;
 		for(int i=0;i<n;i++)
 		{
@@ -53,6 +51,7 @@ class LinkedList{
 		
 		}
 	}
+
 	void display()
 	{ Node t;
 	t=head;
@@ -62,6 +61,7 @@ class LinkedList{
 			t=t.next;
 		}
 	}
+	
 }
 public class Linked {
 
