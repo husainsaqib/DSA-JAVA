@@ -48,7 +48,7 @@ class LinkedList{
 				
 			}
 			count++;
-		x
+		
 		}
 	}
 
