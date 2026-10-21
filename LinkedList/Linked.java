@@ -51,9 +51,67 @@ class LinkedList{
 		
 		}
 	}
+    void addbegin(int value)
+	{ Node nd=new Node(value);
+	if(head==null)
+		{
+			head=nd;
+		}
+	else
+	{
+		nd.next=head;
+		head=nd;
+		
 
+	}
+	count++;
+	}
+	void addLast(int value)
+	{
+		Node nd=new Node(value);
+		if(head==null)
+		{
+               head=nd;
+		}
+		else{
+			Node t=head;
+			while(t.next!=null)
+			{
+				t=t.next;
+			}
+			t.next=nd;
+
+
+		}
+		count++;
+	}
+	void addBetween(int value,int pos)
+	{
+              if(pos>count||count<2)
+			  {
+				System.out.println("Invalid position");
+			  }
+			  else{
+				Node nd=new Node(value);
+				Node t=head;
+				for(int i=1;i<pos-1;i++)
+				{
+					t=t.next;
+				}
+				nd.next=t.next;
+				t.next=nd;
+
+			  }
+			  count++;
+	}
+	
 	void display()
+
 	{ Node t;
+		if(head==null)
+		{
+			System.out.println("list is empyty");
+		}
 	t=head;
 		while(t!=null)
 		{
