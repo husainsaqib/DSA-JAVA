@@ -104,6 +104,60 @@ class LinkedList{
 			  }
 			  count++;
 	}
+	void search(int x)
+	{
+		if(head==null)
+		{
+			System.out.println("List is empty");
+		}
+		else
+		{  Node t=head;
+			boolean flag=false;int index=1;
+			while(t!=null)
+			{
+				if(t.data==x)
+				{
+                       flag=true;
+					   break;
+				}
+				t=t.next;
+				index++;
+			}
+		if(flag==false)
+			System.out.println("Not fount");
+		else
+			System.out.println("Found at position"+index);
+		}
+	}   
+
+	void deletefirst()
+	{
+		if(head==null)
+		{
+			System.out.println("List is already empty");
+		}
+		else
+		{
+			head=head.next;
+			count--;
+		}
+	}
+	void deleteLast()
+	{
+		if(head==null)
+		{
+			System.out.println("List is already empty");
+		}
+		else{
+			Node t=head;
+			while(t.next!=null)
+			{
+				t=t.next;
+			}
+			t.next=null;
+			count--;
+		}
+	}
 	
 	void display()
 
@@ -127,6 +181,9 @@ public class Linked {
 		LinkedList l=new LinkedList();
 		l.create(3);
 		l.display();
+		l.addbegin(3);
+		l.display();
+		
 
 	}
 
