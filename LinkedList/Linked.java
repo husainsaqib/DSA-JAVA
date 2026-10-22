@@ -100,9 +100,9 @@ class LinkedList{
 				}
 				nd.next=t.next;
 				t.next=nd;
-
+                count++;
 			  }
-			  count++;
+			  
 	}
 	void search(int x)
 	{
