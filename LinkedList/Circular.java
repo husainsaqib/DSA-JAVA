@@ -43,6 +43,7 @@ class Circular1 {
 
             count++;
         }
+	   
     }
 void insertAtBegin(int value)
 {

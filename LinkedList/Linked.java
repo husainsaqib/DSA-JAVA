@@ -158,7 +158,23 @@ class LinkedList{
 			count--;
 		}
 	}
-	
+	void deletebetween(int pos)
+	{
+		if(pos>count||count<2)
+		{
+			System.out.println("invalid position");
+		}
+		else
+		{
+			Node t=head;
+			for(int i=1;i<pos-1;i++)
+			{
+				t=t.next;
+			}
+			
+			count--;
+		}
+	}
 	void display()
 
 	{ Node t;
