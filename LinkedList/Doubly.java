@@ -49,6 +49,23 @@ class DoublyLinked
         count++;
         }
     }
+    void insertbegin(int value)
+    {pNode nd=new pNode(value);
+        if(head==null)
+        {
+            head=last=nd;
+        }
+        else
+        {
+            nd.next=head;
+            head.prev=nd;
+            head=nd;
+        }
+    }
+    void insertLast(int value)
+    {
+        
+    }
     void display()
     {
         if(head==null)
