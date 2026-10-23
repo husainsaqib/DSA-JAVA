@@ -175,6 +175,29 @@ class LinkedList{
 			count--;
 		}
 	}
+
+void insertByValue(int value)
+{
+	Node nd=new Node(value);
+	if(head==null||value<head.data)
+	{
+
+		nd.next=head;
+		head=nd;
+
+	}
+	else
+	{Node t=head;
+	  while (t.next!=null && t.next.data<value) {
+		t=t.next;
+	  }
+	  nd.next=t.next;
+	  t.next=nd;
+
+		}
+		count++;
+	}
+
 	void display()
 
 	{ Node t;

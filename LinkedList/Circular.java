@@ -175,6 +175,7 @@ void search(int value)
 
 	}
 }
+
     void display() {
         if (head == null) {
             System.out.println("List is empty");
