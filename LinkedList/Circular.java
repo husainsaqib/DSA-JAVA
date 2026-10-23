@@ -168,6 +168,7 @@ void search(int value)
 			}
 		 
 		  }
+		  t=t.next;
 		  }while(t!=head);
 		  if(flag==false)
 			System.out.println("Not Found");
