@@ -144,6 +144,36 @@ void deletebetween(int pos)
 		t.next=t.next.next;
 	}
 }
+void search(int value)
+{
+	boolean flag=false;
+	if(head==null)
+	{
+		System.out.println("list is empty");
+	}
+	else 
+	{
+          Node1 t=head;
+		  do
+		  {
+		  if(t.data==value)
+		  {
+			if(head.data==value)
+				System.out.println("Node found");
+			else
+			{
+				System.out.println("Found");
+				flag=true;
+				break;
+			}
+		 
+		  }
+		  }while(t!=head);
+		  if(flag==false)
+			System.out.println("Not Found");
+
+	}
+}
     void display() {
         if (head == null) {
             System.out.println("List is empty");
