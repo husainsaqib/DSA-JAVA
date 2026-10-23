@@ -46,7 +46,7 @@ class DoublyLinked
                 last=nd;
 
             }
-
+        count++;
         }
     }
     void display()
@@ -56,7 +56,12 @@ class DoublyLinked
             System.out.println("list is empty");
         }
         else{
-            
+            pNode t=head;
+            while(t!=null)
+            {
+                System.out.println(t.data);
+                t=t.next;
+            }
         }
     }
 }
