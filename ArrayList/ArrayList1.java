@@ -33,8 +33,35 @@ class ArrayList2 {
      {
         arr[i]=sc.nextInt();
      }
+     count=l;
+     sc.close();
    }
-   count=l;
+  void append(int value)
+  {
+    if(count>=max)
+    {
+         updatecapacity();
+    }
+    arr[count]=value;
+    count++;
+  }
+  void insertAtPosition(int pos,int value)
+  {
+    if(pos>count)
+        System.out.println("Invalid position");
+    else if(count==max)
+    {
+        updatecapacity();
+    }
+    else
+    {
+        for(int i=count;i>pos;i--)
+           arr[i]=arr[i-1];
+        arr[pos]=value;
+    }
+
+    
+  }
     
 }
 
