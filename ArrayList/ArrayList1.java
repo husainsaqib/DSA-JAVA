@@ -62,6 +62,25 @@ class ArrayList2 {
 
     
   }
+  int size()
+  {
+    return count;
+  }
+  int capacity()
+  {
+    return max;
+  }
+  void remove(int value)
+  {
+
+  }
+  void display()
+  {
+    for(int i=0;i<count;i++)
+    {
+        System.out.println(arr[i]);
+    }
+  }
     
 }
 
