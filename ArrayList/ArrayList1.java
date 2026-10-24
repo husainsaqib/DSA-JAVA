@@ -70,9 +70,24 @@ class ArrayList2 {
   {
     return max;
   }
-  void remove(int value)
+  void remove()
   {
-
+      arr[count-1]=0;
+      count--;
+  }
+  void remove(int pos)
+  {
+    if(count-1<pos)
+        System.out.println("Invalid Position");
+    else
+    {
+        for(int i=pos;i<count;i++)
+        {
+            arr[i]=arr[i+1];
+        }
+        count--;
+    }
+    
   }
   void display()
   {
