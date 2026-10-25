@@ -20,23 +20,21 @@ class CircularDoub
             pNode nd=new pNode(value);
             if(head==null)
             {
-                head=nd;
+                head=last=nd;
                 
             }
             else
             {
-                pNode t=head;
-                while(t.next!=null)
-                {
-                    t=t.next;
-                }
-               t.next=nd;
-               nd.prev=t;
-               last=nd;
-            }
+               
+                nd.prev=last;
+                nd.next=head;
+                last.next=nd;
+
+                last=nd;
+            } 
             count++;
         }
-        
+
         sc.close();
     }
 

@@ -34,12 +34,13 @@ class Circular1 {
 
             if (head == null) {
                 head = last = nd;
-                last.next = head;
+             
             } else {
                 last.next = nd;
                 last = nd;
-                last.next = head;
-            }
+               
+              
+            }  last.next = head;
 
             count++;
         }
