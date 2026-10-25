@@ -104,11 +104,28 @@ class CircularDoub
     	}
     	count++;
     }
-    void deleteBetween()
+    void deletebegin()
     {
     	if(head==null)
     	{System.out.println("List is already empty");
     	
+    	}
+    	else
+    	{
+    		head=head.next;
+    		last.next=head;
+    		head.prev=last;
+    		
+    		
+    		
+    	}
+    	count--;
+    }
+    void deletelast()
+    {
+    	if(head==null)
+    	{
+    		System.out.println("list is already empty");
     	}
     	else
     	{
@@ -151,7 +168,11 @@ public class CIrcularDoubly {
     	d.addBetween(3, 40);
     	d.display();
     	System.out.println("delete from begin");
-    	d.addBetween(3, 40);
+    	d.deletebegin();
+    	d.display();
+    	d.addbegin(90);
+    	System.out.println("delete from last");
+    	d.deletelast();
     	d.display();
     }
 }
