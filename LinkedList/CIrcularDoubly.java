@@ -129,8 +129,30 @@ class CircularDoub
     	}
     	else
     	{
+    		last.prev.next=head;
+    		last=last.prev;
+    		head.prev=last;
+    	}
+    	count--;
+    }
+    void deletebetween(int pos)
+    {
+    	if(pos>count||count<2)
+    	{
+    		System.out.println("Invalid position");
+    	}
+    	else
+    	{
+    		pNode t=head;
+    		for(int i=1;i<pos-1;i++)
+    		{
+    			t=t.next;
+    		}
+    		t.next=t.next.next;
+    		t.next.prev=t;
     		
     	}
+    	count--;
     }
     void display()
     {   if(head==null)
@@ -142,9 +164,10 @@ class CircularDoub
     	pNode t=head;
     	do
     	{
-    		System.out.println(t.data);
+    		System.out.print(t.data+" ");
     		t=t.next;
     	}while(t!=head);
+    	System.out.println();
     }
 
     }
@@ -173,6 +196,9 @@ public class CIrcularDoubly {
     	d.addbegin(90);
     	System.out.println("delete from last");
     	d.deletelast();
+    	d.display();
+    	System.out.println("delete between");
+    	d.deletebetween(3);
     	d.display();
     }
 }

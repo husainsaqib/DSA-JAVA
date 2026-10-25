@@ -11,11 +11,11 @@ class Node1<T>
 	}
 	
 }
-class GenLinked
+class GenLinked<T> extends Node1<T>
 {
 	Node1 head;
 	int count;
-	GenLinked()
+	GenLinked<T>()
 	{
 		head=null;
 		count=0;
@@ -27,8 +27,11 @@ class GenLinked
 		for(int i=0;i<n;i++)
 		{
 			
-			Node
+			Node1<T> nd=new Node1<>(T t);
 			if(head==null)
+			{
+
+			}
 				
 			
 		}
@@ -37,7 +40,7 @@ class GenLinked
 public class GenericLinked {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 
 	}
 

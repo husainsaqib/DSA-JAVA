@@ -1,4 +1,4 @@
-package Stack;
+
 class StackArray
 {
     int arr[];
