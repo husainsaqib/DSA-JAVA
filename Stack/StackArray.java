@@ -1,4 +1,3 @@
-
 class StackArray
 {
     int arr[];
@@ -9,7 +8,6 @@ class StackArray
         max=8;
         arr=new int[max];
         top=-1;
-
     }
     StackArray(int max)
     {
