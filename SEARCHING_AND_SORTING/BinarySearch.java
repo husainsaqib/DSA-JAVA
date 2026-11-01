@@ -1,4 +1,4 @@
-package Sorting;
+package SEARCHING_AND_SORTING;
 import java.util.Scanner;
 public class BinarySearch{
     public static void main(String[] args) {
